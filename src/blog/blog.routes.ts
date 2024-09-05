@@ -17,7 +17,7 @@ const blogService = new BlogService();
 const blogController = new BlogCnontroller(blogService);
 
 blogRouter.post(
-  "/blog",
+  "/",
   authentication,
   createBlogValidation,
   validateRequestBlogBody,
@@ -28,23 +28,19 @@ blogRouter.post(
 );
 
 blogRouter.get(
-  "/blog/:blogId",
+  "/:blogId",
   validateBlogUUID,
   async (req: CustomRequest, res: Response) => {
     return await blogController.getBlog(req, res);
   }
 );
 
-blogRouter.get(
-  "/blogs",
-  pagination,
-  async (req: CustomRequest, res: Response) => {
-    return await blogController.getAllBlogs(req, res);
-  }
-);
+blogRouter.get("/", pagination, async (req: CustomRequest, res: Response) => {
+  return await blogController.getAllBlogs(req, res);
+});
 
 blogRouter.put(
-  "/blog/:blogId",
+  "/:blogId",
   validateBlogUUID,
   authentication,
   createBlogValidation,
@@ -56,7 +52,7 @@ blogRouter.put(
 );
 
 blogRouter.delete(
-  "/blog/:blogId",
+  "/:blogId",
   validateBlogUUID,
   authentication,
   async (req: CustomRequest, res: Response) => {

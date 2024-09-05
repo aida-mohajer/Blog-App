@@ -6,7 +6,6 @@ import { ReadSignupDto } from "./dto/read-signup.dto";
 import { SignupDto } from "./dto/signup.dto";
 import { User } from "../entities/user.entity";
 import { Encrypt } from "../helpers/encrypt";
-import { UserLikeBlogs } from "../entities/user_like_blogs.entity";
 import { Blog } from "../entities/blog.entity";
 
 export class UserService {

@@ -11,7 +11,7 @@ export const likeRouter = express.Router();
 const likeService = new LikeService();
 const likeController = new LikeController(likeService);
 
-likeRouter.get(
+likeRouter.post(
   "/toggleLike/:blogId",
   validateBlogUUID,
   authentication,
