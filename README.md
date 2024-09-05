@@ -57,11 +57,11 @@ A simple blog application built with **Express.js**, **TypeScript**, **TypeORM**
 
 - **Blog**:
 
-  - `GET /api/users/blogs`: Get all blogs
-  - `GET /api/users/blog/:id`: Get a blogs
-  - `POST /api/users/blog`: Create a new blog
-  - `PUT /api/usuers/blog/:id`: Update a blog
-  - `DELETE /api/users/blog/:id`: Delete a blog
+  - `GET /api/blogs/`: Get all blogs
+  - `GET /api/blogs/:id`: Get a blogs
+  - `POST /api/blogs/`: Create a new blog
+  - `PUT /api/blogs/:id`: Update a blog
+  - `DELETE /api/blogs/:id`: Delete a blog
 
 - **Likes**:
-  - `POST /api/users/toggleLike/:id`: Like/unlike a blog post
+  - `POST /api/likes/toggleLike/:id`: Like/unlike a blog post
